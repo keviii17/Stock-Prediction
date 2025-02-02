@@ -2,6 +2,7 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import date
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
@@ -66,7 +67,7 @@ def main():
         elif choice in companies:
             ticker = companies[choice]
             start_date = "2023-01-01"
-            end_date = "2025-01-01"
+            end_date = date.today()
             
             stock_data = get_stock_data(ticker, start_date, end_date)
             X_train, X_test, y_train, y_test = prepare_data(stock_data)
