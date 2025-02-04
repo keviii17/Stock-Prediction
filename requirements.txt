@@ -1,0 +1,1 @@
+matplotlib numpy scikit-learn pandas yfinance datetime
